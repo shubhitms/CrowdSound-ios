@@ -1,837 +1,1981 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		2456D16F189C93B4008CF61F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456D16E189C93B4008CF61F /* Foundation.framework */; };
-		2456D171189C93B4008CF61F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456D170189C93B4008CF61F /* CoreGraphics.framework */; };
-		2456D173189C93B4008CF61F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456D172189C93B4008CF61F /* UIKit.framework */; };
-		2456D179189C93B4008CF61F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2456D177189C93B4008CF61F /* InfoPlist.strings */; };
-		2456D17B189C93B4008CF61F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456D17A189C93B4008CF61F /* main.m */; };
-		2456D17F189C93B4008CF61F /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456D17E189C93B4008CF61F /* XYZAppDelegate.m */; };
-		2456D182189C93B4008CF61F /* XYZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456D181189C93B4008CF61F /* XYZRootViewController.m */; };
-		2456D185189C93B4008CF61F /* XYZDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456D184189C93B4008CF61F /* XYZDataViewController.m */; };
-		2456D188189C93B4008CF61F /* XYZModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456D187189C93B4008CF61F /* XYZModelController.m */; };
-		2456D18B189C93B4008CF61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2456D189189C93B4008CF61F /* Main.storyboard */; };
-		2456D18D189C93B4008CF61F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2456D18C189C93B4008CF61F /* Images.xcassets */; };
-		2456D194189C93B4008CF61F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456D193189C93B4008CF61F /* XCTest.framework */; };
-		2456D195189C93B4008CF61F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456D16E189C93B4008CF61F /* Foundation.framework */; };
-		2456D196189C93B4008CF61F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456D172189C93B4008CF61F /* UIKit.framework */; };
-		2456D19E189C93B4008CF61F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2456D19C189C93B4008CF61F /* InfoPlist.strings */; };
-		2456D1A0189C93B4008CF61F /* CrowdSoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456D19F189C93B4008CF61F /* CrowdSoundTests.m */; };
-		24FFCEB1189CD3DA004D706B /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFCE95189CD311004D706B /* libJSONKit.a */; };
-		24FFCEB2189CD3DA004D706B /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFCEA0189CD321004D706B /* libOAuth2Client.a */; };
-		24FFCEB3189CD3DA004D706B /* libOHAttributedLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFCEA6189CD32D004D706B /* libOHAttributedLabel.a */; };
-		24FFCEB4189CD3DA004D706B /* libSoundCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFCE85189CD2CF004D706B /* libSoundCloudAPI.a */; };
-		24FFCEB5189CD3DA004D706B /* libSoundCloudUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFCE8C189CD306004D706B /* libSoundCloudUI.a */; };
-		24FFCEB7189CD455004D706B /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEB6189CD455004D706B /* SoundCloud.bundle */; };
-		24FFCEB8189CD455004D706B /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEB6189CD455004D706B /* SoundCloud.bundle */; };
-		24FFCEBC189CDB25004D706B /* SCTTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */; };
-		24FFCEBD189CDB25004D706B /* SCTTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */; };
-		24FFCEBE189CDB25004D706B /* SCTTrackListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */; };
-		24FFCEBF189CDB25004D706B /* SCTTrackListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */; };
-		2A17D569189CC0B900263305 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D568189CC0B900263305 /* AddressBook.framework */; };
-		2A17D56B189CC0BE00263305 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D56A189CC0BE00263305 /* AddressBookUI.framework */; };
-		2A17D56D189CC0D000263305 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D56C189CC0D000263305 /* CoreLocation.framework */; };
-		2A17D56F189CC0DB00263305 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D56E189CC0DB00263305 /* CoreText.framework */; };
-		2A17D571189CC0E700263305 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D570189CC0E700263305 /* QuartzCore.framework */; };
-		2A17D573189CC0ED00263305 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D572189CC0ED00263305 /* Security.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2456D197189C93B4008CF61F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2456D163189C93B4008CF61F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2456D16A189C93B4008CF61F;
-			remoteInfo = CrowdSound;
-		};
-		24FFCE82189CD2CF004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE7D189CD2CF004D706B /* SoundCloudAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 94535F86123FAFDF00BD668A;
-			remoteInfo = SoundCloudAPI.framework;
-		};
-		24FFCE84189CD2CF004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE7D189CD2CF004D706B /* SoundCloudAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = SoundCloudAPI;
-		};
-		24FFCE8B189CD306004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE86189CD306004D706B /* SoundCloudUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6EF8C6113F929D700B20B40;
-			remoteInfo = libSoundCloudUI;
-		};
-		24FFCE8D189CD306004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE86189CD306004D706B /* SoundCloudUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F62E0CE5148FB27100BE8F14;
-			remoteInfo = SoundCloudUI.framework;
-		};
-		24FFCE94189CD311004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE8F189CD311004D706B /* JSONKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6803523148F6D22008A51BA;
-			remoteInfo = libJSONKit;
-		};
-		24FFCE96189CD311004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE8F189CD311004D706B /* JSONKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6AE0202148F825C0004909F;
-			remoteInfo = JSONKit.framework;
-		};
-		24FFCE9D189CD321004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE98189CD321004D706B /* OAuth2Client.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 942FFCD612315E0A00E6C65E;
-			remoteInfo = OAuth2Client.framework;
-		};
-		24FFCE9F189CD321004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE98189CD321004D706B /* OAuth2Client.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = OAuth2Client;
-		};
-		24FFCEA5189CD32D004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCEA1189CD32D004D706B /* OHAttributedLabel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F62728FA148F70DF00314599;
-			remoteInfo = OHAttributedLabel;
-		};
-		24FFCEA7189CD37F004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE86189CD306004D706B /* SoundCloudUI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F6EF8C6013F929D700B20B40;
-			remoteInfo = libSoundCloudUI;
-		};
-		24FFCEA9189CD3AB004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCEA1189CD32D004D706B /* OHAttributedLabel.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F62728F9148F70DF00314599;
-			remoteInfo = OHAttributedLabel;
-		};
-		24FFCEAB189CD3AB004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE98189CD321004D706B /* OAuth2Client.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = OAuth2Client;
-		};
-		24FFCEAD189CD3AB004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE8F189CD311004D706B /* JSONKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F6803522148F6D22008A51BA;
-			remoteInfo = libJSONKit;
-		};
-		24FFCEAF189CD3AB004D706B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24FFCE7D189CD2CF004D706B /* SoundCloudAPI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = SoundCloudAPI;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		2456D16B189C93B4008CF61F /* CrowdSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2456D16E189C93B4008CF61F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2456D170189C93B4008CF61F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2456D172189C93B4008CF61F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2456D176189C93B4008CF61F /* CrowdSound-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrowdSound-Info.plist"; sourceTree = "<group>"; };
-		2456D178189C93B4008CF61F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2456D17A189C93B4008CF61F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2456D17C189C93B4008CF61F /* CrowdSound-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrowdSound-Prefix.pch"; sourceTree = "<group>"; };
-		2456D17D189C93B4008CF61F /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
-		2456D17E189C93B4008CF61F /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
-		2456D180189C93B4008CF61F /* XYZRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZRootViewController.h; sourceTree = "<group>"; };
-		2456D181189C93B4008CF61F /* XYZRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZRootViewController.m; sourceTree = "<group>"; };
-		2456D183189C93B4008CF61F /* XYZDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZDataViewController.h; sourceTree = "<group>"; };
-		2456D184189C93B4008CF61F /* XYZDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZDataViewController.m; sourceTree = "<group>"; };
-		2456D186189C93B4008CF61F /* XYZModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZModelController.h; sourceTree = "<group>"; };
-		2456D187189C93B4008CF61F /* XYZModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZModelController.m; sourceTree = "<group>"; };
-		2456D18A189C93B4008CF61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2456D18C189C93B4008CF61F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2456D192189C93B4008CF61F /* CrowdSoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdSoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2456D193189C93B4008CF61F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2456D19B189C93B4008CF61F /* CrowdSoundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrowdSoundTests-Info.plist"; sourceTree = "<group>"; };
-		2456D19D189C93B4008CF61F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2456D19F189C93B4008CF61F /* CrowdSoundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrowdSoundTests.m; sourceTree = "<group>"; };
-		24FFCE7D189CD2CF004D706B /* SoundCloudAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoundCloudAPI.xcodeproj; path = ../CocoaSoundCloudAPI/SoundCloudAPI.xcodeproj; sourceTree = "<group>"; };
-		24FFCE86189CD306004D706B /* SoundCloudUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoundCloudUI.xcodeproj; path = ../CocoaSoundCloudUI/SoundCloudUI.xcodeproj; sourceTree = "<group>"; };
-		24FFCE8F189CD311004D706B /* JSONKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONKit.xcodeproj; path = ../JSONKit/JSONKit.xcodeproj; sourceTree = "<group>"; };
-		24FFCE98189CD321004D706B /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = ../OAuth2Client/OAuth2Client.xcodeproj; sourceTree = "<group>"; };
-		24FFCEA1189CD32D004D706B /* OHAttributedLabel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OHAttributedLabel.xcodeproj; path = ../OHAttributedLabel/OHAttributedLabel.xcodeproj; sourceTree = "<group>"; };
-		24FFCEB6189CD455004D706B /* SoundCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SoundCloud.bundle; sourceTree = "<group>"; };
-		24FFCEB9189CDB25004D706B /* SCTTrackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTTrackListViewController.h; sourceTree = "<group>"; };
-		24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTTrackListViewController.m; sourceTree = "<group>"; };
-		24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCTTrackListViewController.xib; sourceTree = "<group>"; };
-		2A17D568189CC0B900263305 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		2A17D56A189CC0BE00263305 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		2A17D56C189CC0D000263305 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		2A17D56E189CC0DB00263305 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		2A17D570189CC0E700263305 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		2A17D572189CC0ED00263305 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		2456D168189C93B4008CF61F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24FFCEB1189CD3DA004D706B /* libJSONKit.a in Frameworks */,
-				24FFCEB2189CD3DA004D706B /* libOAuth2Client.a in Frameworks */,
-				24FFCEB3189CD3DA004D706B /* libOHAttributedLabel.a in Frameworks */,
-				24FFCEB4189CD3DA004D706B /* libSoundCloudAPI.a in Frameworks */,
-				24FFCEB5189CD3DA004D706B /* libSoundCloudUI.a in Frameworks */,
-				2A17D573189CC0ED00263305 /* Security.framework in Frameworks */,
-				2A17D571189CC0E700263305 /* QuartzCore.framework in Frameworks */,
-				2A17D56F189CC0DB00263305 /* CoreText.framework in Frameworks */,
-				2A17D56D189CC0D000263305 /* CoreLocation.framework in Frameworks */,
-				2456D171189C93B4008CF61F /* CoreGraphics.framework in Frameworks */,
-				2A17D56B189CC0BE00263305 /* AddressBookUI.framework in Frameworks */,
-				2A17D569189CC0B900263305 /* AddressBook.framework in Frameworks */,
-				2456D173189C93B4008CF61F /* UIKit.framework in Frameworks */,
-				2456D16F189C93B4008CF61F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2456D18F189C93B4008CF61F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2456D194189C93B4008CF61F /* XCTest.framework in Frameworks */,
-				2456D196189C93B4008CF61F /* UIKit.framework in Frameworks */,
-				2456D195189C93B4008CF61F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		2456D162189C93B4008CF61F = {
-			isa = PBXGroup;
-			children = (
-				24FFCEB6189CD455004D706B /* SoundCloud.bundle */,
-				24FFCEA1189CD32D004D706B /* OHAttributedLabel.xcodeproj */,
-				24FFCE98189CD321004D706B /* OAuth2Client.xcodeproj */,
-				24FFCE8F189CD311004D706B /* JSONKit.xcodeproj */,
-				24FFCE86189CD306004D706B /* SoundCloudUI.xcodeproj */,
-				24FFCE7D189CD2CF004D706B /* SoundCloudAPI.xcodeproj */,
-				2456D174189C93B4008CF61F /* CrowdSound */,
-				2456D199189C93B4008CF61F /* CrowdSoundTests */,
-				2456D16D189C93B4008CF61F /* Frameworks */,
-				2456D16C189C93B4008CF61F /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		2456D16C189C93B4008CF61F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2456D16B189C93B4008CF61F /* CrowdSound.app */,
-				2456D192189C93B4008CF61F /* CrowdSoundTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2456D16D189C93B4008CF61F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2A17D572189CC0ED00263305 /* Security.framework */,
-				2A17D570189CC0E700263305 /* QuartzCore.framework */,
-				2A17D56E189CC0DB00263305 /* CoreText.framework */,
-				2A17D56C189CC0D000263305 /* CoreLocation.framework */,
-				2A17D56A189CC0BE00263305 /* AddressBookUI.framework */,
-				2A17D568189CC0B900263305 /* AddressBook.framework */,
-				2456D16E189C93B4008CF61F /* Foundation.framework */,
-				2456D170189C93B4008CF61F /* CoreGraphics.framework */,
-				2456D172189C93B4008CF61F /* UIKit.framework */,
-				2456D193189C93B4008CF61F /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2456D174189C93B4008CF61F /* CrowdSound */ = {
-			isa = PBXGroup;
-			children = (
-				2456D17D189C93B4008CF61F /* XYZAppDelegate.h */,
-				2456D17E189C93B4008CF61F /* XYZAppDelegate.m */,
-				2456D180189C93B4008CF61F /* XYZRootViewController.h */,
-				2456D181189C93B4008CF61F /* XYZRootViewController.m */,
-				2456D183189C93B4008CF61F /* XYZDataViewController.h */,
-				2456D184189C93B4008CF61F /* XYZDataViewController.m */,
-				2456D186189C93B4008CF61F /* XYZModelController.h */,
-				2456D187189C93B4008CF61F /* XYZModelController.m */,
-				2456D189189C93B4008CF61F /* Main.storyboard */,
-				2456D18C189C93B4008CF61F /* Images.xcassets */,
-				2456D175189C93B4008CF61F /* Supporting Files */,
-				24FFCEB9189CDB25004D706B /* SCTTrackListViewController.h */,
-				24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */,
-				24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */,
-			);
-			path = CrowdSound;
-			sourceTree = "<group>";
-		};
-		2456D175189C93B4008CF61F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2456D176189C93B4008CF61F /* CrowdSound-Info.plist */,
-				2456D177189C93B4008CF61F /* InfoPlist.strings */,
-				2456D17A189C93B4008CF61F /* main.m */,
-				2456D17C189C93B4008CF61F /* CrowdSound-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2456D199189C93B4008CF61F /* CrowdSoundTests */ = {
-			isa = PBXGroup;
-			children = (
-				2456D19F189C93B4008CF61F /* CrowdSoundTests.m */,
-				2456D19A189C93B4008CF61F /* Supporting Files */,
-			);
-			path = CrowdSoundTests;
-			sourceTree = "<group>";
-		};
-		2456D19A189C93B4008CF61F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2456D19B189C93B4008CF61F /* CrowdSoundTests-Info.plist */,
-				2456D19C189C93B4008CF61F /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		24FFCE7E189CD2CF004D706B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24FFCE83189CD2CF004D706B /* SoundCloudAPI.framework */,
-				24FFCE85189CD2CF004D706B /* libSoundCloudAPI.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		24FFCE87189CD306004D706B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24FFCE8C189CD306004D706B /* libSoundCloudUI.a */,
-				24FFCE8E189CD306004D706B /* SoundCloudUI.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		24FFCE90189CD311004D706B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24FFCE95189CD311004D706B /* libJSONKit.a */,
-				24FFCE97189CD311004D706B /* JSONKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		24FFCE99189CD321004D706B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24FFCE9E189CD321004D706B /* OAuth2Client.framework */,
-				24FFCEA0189CD321004D706B /* libOAuth2Client.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		24FFCEA2189CD32D004D706B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				24FFCEA6189CD32D004D706B /* libOHAttributedLabel.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		2456D16A189C93B4008CF61F /* CrowdSound */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2456D1A3189C93B4008CF61F /* Build configuration list for PBXNativeTarget "CrowdSound" */;
-			buildPhases = (
-				2456D167189C93B4008CF61F /* Sources */,
-				2456D168189C93B4008CF61F /* Frameworks */,
-				2456D169189C93B4008CF61F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				24FFCEAA189CD3AB004D706B /* PBXTargetDependency */,
-				24FFCEAC189CD3AB004D706B /* PBXTargetDependency */,
-				24FFCEAE189CD3AB004D706B /* PBXTargetDependency */,
-				24FFCEB0189CD3AB004D706B /* PBXTargetDependency */,
-				24FFCEA8189CD37F004D706B /* PBXTargetDependency */,
-			);
-			name = CrowdSound;
-			productName = CrowdSound;
-			productReference = 2456D16B189C93B4008CF61F /* CrowdSound.app */;
-			productType = "com.apple.product-type.application";
-		};
-		2456D191189C93B4008CF61F /* CrowdSoundTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2456D1A6189C93B4008CF61F /* Build configuration list for PBXNativeTarget "CrowdSoundTests" */;
-			buildPhases = (
-				2456D18E189C93B4008CF61F /* Sources */,
-				2456D18F189C93B4008CF61F /* Frameworks */,
-				2456D190189C93B4008CF61F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2456D198189C93B4008CF61F /* PBXTargetDependency */,
-			);
-			name = CrowdSoundTests;
-			productName = CrowdSoundTests;
-			productReference = 2456D192189C93B4008CF61F /* CrowdSoundTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		2456D163189C93B4008CF61F /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = XYZ;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = Hype;
-				TargetAttributes = {
-					2456D16A189C93B4008CF61F = {
-						DevelopmentTeam = 2S3D8J8M3T;
-					};
-					2456D191189C93B4008CF61F = {
-						TestTargetID = 2456D16A189C93B4008CF61F;
-					};
-				};
-			};
-			buildConfigurationList = 2456D166189C93B4008CF61F /* Build configuration list for PBXProject "CrowdSound" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 2456D162189C93B4008CF61F;
-			productRefGroup = 2456D16C189C93B4008CF61F /* Products */;
-			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 24FFCE90189CD311004D706B /* Products */;
-					ProjectRef = 24FFCE8F189CD311004D706B /* JSONKit.xcodeproj */;
-				},
-				{
-					ProductGroup = 24FFCE99189CD321004D706B /* Products */;
-					ProjectRef = 24FFCE98189CD321004D706B /* OAuth2Client.xcodeproj */;
-				},
-				{
-					ProductGroup = 24FFCEA2189CD32D004D706B /* Products */;
-					ProjectRef = 24FFCEA1189CD32D004D706B /* OHAttributedLabel.xcodeproj */;
-				},
-				{
-					ProductGroup = 24FFCE7E189CD2CF004D706B /* Products */;
-					ProjectRef = 24FFCE7D189CD2CF004D706B /* SoundCloudAPI.xcodeproj */;
-				},
-				{
-					ProductGroup = 24FFCE87189CD306004D706B /* Products */;
-					ProjectRef = 24FFCE86189CD306004D706B /* SoundCloudUI.xcodeproj */;
-				},
-			);
-			projectRoot = "";
-			targets = (
-				2456D16A189C93B4008CF61F /* CrowdSound */,
-				2456D191189C93B4008CF61F /* CrowdSoundTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		24FFCE83189CD2CF004D706B /* SoundCloudAPI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SoundCloudAPI.framework;
-			remoteRef = 24FFCE82189CD2CF004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCE85189CD2CF004D706B /* libSoundCloudAPI.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSoundCloudAPI.a;
-			remoteRef = 24FFCE84189CD2CF004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCE8C189CD306004D706B /* libSoundCloudUI.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSoundCloudUI.a;
-			remoteRef = 24FFCE8B189CD306004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCE8E189CD306004D706B /* SoundCloudUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SoundCloudUI.framework;
-			remoteRef = 24FFCE8D189CD306004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCE95189CD311004D706B /* libJSONKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libJSONKit.a;
-			remoteRef = 24FFCE94189CD311004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCE97189CD311004D706B /* JSONKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = JSONKit.framework;
-			remoteRef = 24FFCE96189CD311004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCE9E189CD321004D706B /* OAuth2Client.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuth2Client.framework;
-			remoteRef = 24FFCE9D189CD321004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCEA0189CD321004D706B /* libOAuth2Client.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOAuth2Client.a;
-			remoteRef = 24FFCE9F189CD321004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		24FFCEA6189CD32D004D706B /* libOHAttributedLabel.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOHAttributedLabel.a;
-			remoteRef = 24FFCEA5189CD32D004D706B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
-/* Begin PBXResourcesBuildPhase section */
-		2456D169189C93B4008CF61F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2456D18D189C93B4008CF61F /* Images.xcassets in Resources */,
-				24FFCEBE189CDB25004D706B /* SCTTrackListViewController.xib in Resources */,
-				24FFCEB7189CD455004D706B /* SoundCloud.bundle in Resources */,
-				2456D179189C93B4008CF61F /* InfoPlist.strings in Resources */,
-				2456D18B189C93B4008CF61F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2456D190189C93B4008CF61F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24FFCEBF189CDB25004D706B /* SCTTrackListViewController.xib in Resources */,
-				2456D19E189C93B4008CF61F /* InfoPlist.strings in Resources */,
-				24FFCEB8189CD455004D706B /* SoundCloud.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		2456D167189C93B4008CF61F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2456D17F189C93B4008CF61F /* XYZAppDelegate.m in Sources */,
-				2456D182189C93B4008CF61F /* XYZRootViewController.m in Sources */,
-				2456D185189C93B4008CF61F /* XYZDataViewController.m in Sources */,
-				24FFCEBC189CDB25004D706B /* SCTTrackListViewController.m in Sources */,
-				2456D188189C93B4008CF61F /* XYZModelController.m in Sources */,
-				2456D17B189C93B4008CF61F /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2456D18E189C93B4008CF61F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2456D1A0189C93B4008CF61F /* CrowdSoundTests.m in Sources */,
-				24FFCEBD189CDB25004D706B /* SCTTrackListViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2456D198189C93B4008CF61F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2456D16A189C93B4008CF61F /* CrowdSound */;
-			targetProxy = 2456D197189C93B4008CF61F /* PBXContainerItemProxy */;
-		};
-		24FFCEA8189CD37F004D706B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libSoundCloudUI;
-			targetProxy = 24FFCEA7189CD37F004D706B /* PBXContainerItemProxy */;
-		};
-		24FFCEAA189CD3AB004D706B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OHAttributedLabel;
-			targetProxy = 24FFCEA9189CD3AB004D706B /* PBXContainerItemProxy */;
-		};
-		24FFCEAC189CD3AB004D706B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OAuth2Client;
-			targetProxy = 24FFCEAB189CD3AB004D706B /* PBXContainerItemProxy */;
-		};
-		24FFCEAE189CD3AB004D706B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libJSONKit;
-			targetProxy = 24FFCEAD189CD3AB004D706B /* PBXContainerItemProxy */;
-		};
-		24FFCEB0189CD3AB004D706B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SoundCloudAPI;
-			targetProxy = 24FFCEAF189CD3AB004D706B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2456D177189C93B4008CF61F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2456D178189C93B4008CF61F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2456D189189C93B4008CF61F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2456D18A189C93B4008CF61F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2456D19C189C93B4008CF61F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2456D19D189C93B4008CF61F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		2456D1A1189C93B4008CF61F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		2456D1A2189C93B4008CF61F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2456D1A4189C93B4008CF61F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CrowdSound/CrowdSound-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$PROJECT_DIR/**",
-				);
-				INFOPLIST_FILE = "CrowdSound/CrowdSound-Info.plist";
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		2456D1A5189C93B4008CF61F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CrowdSound/CrowdSound-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$PROJECT_DIR/**",
-				);
-				INFOPLIST_FILE = "CrowdSound/CrowdSound-Info.plist";
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		2456D1A7189C93B4008CF61F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrowdSound.app/CrowdSound";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CrowdSound/CrowdSound-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CrowdSoundTests/CrowdSoundTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		2456D1A8189C93B4008CF61F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrowdSound.app/CrowdSound";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CrowdSound/CrowdSound-Prefix.pch";
-				INFOPLIST_FILE = "CrowdSoundTests/CrowdSoundTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		2456D166189C93B4008CF61F /* Build configuration list for PBXProject "CrowdSound" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2456D1A1189C93B4008CF61F /* Debug */,
-				2456D1A2189C93B4008CF61F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2456D1A3189C93B4008CF61F /* Build configuration list for PBXNativeTarget "CrowdSound" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2456D1A4189C93B4008CF61F /* Debug */,
-				2456D1A5189C93B4008CF61F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2456D1A6189C93B4008CF61F /* Build configuration list for PBXNativeTarget "CrowdSoundTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2456D1A7189C93B4008CF61F /* Debug */,
-				2456D1A8189C93B4008CF61F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 2456D163189C93B4008CF61F /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0476D37A556E4FF4A6952B45</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D70418D2F07B4F31B248672E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D162189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>24FFCEB6189CD455004D706B</string>
+				<string>24FFCEA1189CD32D004D706B</string>
+				<string>24FFCE98189CD321004D706B</string>
+				<string>24FFCE8F189CD311004D706B</string>
+				<string>24FFCE86189CD306004D706B</string>
+				<string>24FFCE7D189CD2CF004D706B</string>
+				<string>2456D174189C93B4008CF61F</string>
+				<string>2456D199189C93B4008CF61F</string>
+				<string>2456D16D189C93B4008CF61F</string>
+				<string>2456D16C189C93B4008CF61F</string>
+				<string>9CBE68FEC7D4462A82219770</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D163189C93B4008CF61F</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>XYZ</string>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Hype</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>2456D16A189C93B4008CF61F</key>
+					<dict>
+						<key>DevelopmentTeam</key>
+						<string>2S3D8J8M3T</string>
+					</dict>
+					<key>2456D191189C93B4008CF61F</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>2456D16A189C93B4008CF61F</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2456D166189C93B4008CF61F</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>2456D162189C93B4008CF61F</string>
+			<key>productRefGroup</key>
+			<string>2456D16C189C93B4008CF61F</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array>
+				<dict>
+					<key>ProductGroup</key>
+					<string>24FFCE90189CD311004D706B</string>
+					<key>ProjectRef</key>
+					<string>24FFCE8F189CD311004D706B</string>
+				</dict>
+				<dict>
+					<key>ProductGroup</key>
+					<string>24FFCE99189CD321004D706B</string>
+					<key>ProjectRef</key>
+					<string>24FFCE98189CD321004D706B</string>
+				</dict>
+				<dict>
+					<key>ProductGroup</key>
+					<string>24FFCEA2189CD32D004D706B</string>
+					<key>ProjectRef</key>
+					<string>24FFCEA1189CD32D004D706B</string>
+				</dict>
+				<dict>
+					<key>ProductGroup</key>
+					<string>24FFCE7E189CD2CF004D706B</string>
+					<key>ProjectRef</key>
+					<string>24FFCE7D189CD2CF004D706B</string>
+				</dict>
+				<dict>
+					<key>ProductGroup</key>
+					<string>24FFCE87189CD306004D706B</string>
+					<key>ProjectRef</key>
+					<string>24FFCE86189CD306004D706B</string>
+				</dict>
+			</array>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>2456D16A189C93B4008CF61F</string>
+				<string>2456D191189C93B4008CF61F</string>
+			</array>
+		</dict>
+		<key>2456D166189C93B4008CF61F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2456D1A1189C93B4008CF61F</string>
+				<string>2456D1A2189C93B4008CF61F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2456D167189C93B4008CF61F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2456D17F189C93B4008CF61F</string>
+				<string>2456D182189C93B4008CF61F</string>
+				<string>2456D185189C93B4008CF61F</string>
+				<string>24FFCEBC189CDB25004D706B</string>
+				<string>2456D188189C93B4008CF61F</string>
+				<string>2456D17B189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2456D168189C93B4008CF61F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>24FFCEB1189CD3DA004D706B</string>
+				<string>24FFCEB2189CD3DA004D706B</string>
+				<string>24FFCEB3189CD3DA004D706B</string>
+				<string>24FFCEB4189CD3DA004D706B</string>
+				<string>24FFCEB5189CD3DA004D706B</string>
+				<string>2A17D573189CC0ED00263305</string>
+				<string>2A17D571189CC0E700263305</string>
+				<string>2A17D56F189CC0DB00263305</string>
+				<string>2A17D56D189CC0D000263305</string>
+				<string>2456D171189C93B4008CF61F</string>
+				<string>2A17D56B189CC0BE00263305</string>
+				<string>2A17D569189CC0B900263305</string>
+				<string>2456D173189C93B4008CF61F</string>
+				<string>2456D16F189C93B4008CF61F</string>
+				<string>0476D37A556E4FF4A6952B45</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2456D169189C93B4008CF61F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2456D18D189C93B4008CF61F</string>
+				<string>24FFCEBE189CDB25004D706B</string>
+				<string>24FFCEB7189CD455004D706B</string>
+				<string>2456D179189C93B4008CF61F</string>
+				<string>2456D18B189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2456D16A189C93B4008CF61F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2456D1A3189C93B4008CF61F</string>
+			<key>buildPhases</key>
+			<array>
+				<string>88625C685F1A47FFB0702927</string>
+				<string>2456D167189C93B4008CF61F</string>
+				<string>2456D168189C93B4008CF61F</string>
+				<string>2456D169189C93B4008CF61F</string>
+				<string>377F27FF26794E37B08C7AE6</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>24FFCEAA189CD3AB004D706B</string>
+				<string>24FFCEAC189CD3AB004D706B</string>
+				<string>24FFCEAE189CD3AB004D706B</string>
+				<string>24FFCEB0189CD3AB004D706B</string>
+				<string>24FFCEA8189CD37F004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>CrowdSound</string>
+			<key>productName</key>
+			<string>CrowdSound</string>
+			<key>productReference</key>
+			<string>2456D16B189C93B4008CF61F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>2456D16B189C93B4008CF61F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>CrowdSound.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2456D16C189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D16B189C93B4008CF61F</string>
+				<string>2456D192189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D16D189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2A17D572189CC0ED00263305</string>
+				<string>2A17D570189CC0E700263305</string>
+				<string>2A17D56E189CC0DB00263305</string>
+				<string>2A17D56C189CC0D000263305</string>
+				<string>2A17D56A189CC0BE00263305</string>
+				<string>2A17D568189CC0B900263305</string>
+				<string>2456D16E189C93B4008CF61F</string>
+				<string>2456D170189C93B4008CF61F</string>
+				<string>2456D172189C93B4008CF61F</string>
+				<string>2456D193189C93B4008CF61F</string>
+				<string>D70418D2F07B4F31B248672E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D16E189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2456D16F189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D16E189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D170189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2456D171189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D170189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D172189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2456D173189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D172189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D174189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D17D189C93B4008CF61F</string>
+				<string>2456D17E189C93B4008CF61F</string>
+				<string>2456D180189C93B4008CF61F</string>
+				<string>2456D181189C93B4008CF61F</string>
+				<string>2456D183189C93B4008CF61F</string>
+				<string>2456D184189C93B4008CF61F</string>
+				<string>2456D186189C93B4008CF61F</string>
+				<string>2456D187189C93B4008CF61F</string>
+				<string>2456D189189C93B4008CF61F</string>
+				<string>2456D18C189C93B4008CF61F</string>
+				<string>2456D175189C93B4008CF61F</string>
+				<string>24FFCEB9189CDB25004D706B</string>
+				<string>24FFCEBA189CDB25004D706B</string>
+				<string>24FFCEBB189CDB25004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CrowdSound</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D175189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D176189C93B4008CF61F</string>
+				<string>2456D177189C93B4008CF61F</string>
+				<string>2456D17A189C93B4008CF61F</string>
+				<string>2456D17C189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D176189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>CrowdSound-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D177189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D178189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D178189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D179189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D177189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D17A189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D17B189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D17A189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D17C189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CrowdSound-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D17D189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>XYZAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D17E189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>XYZAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D17F189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D17E189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D180189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>XYZRootViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D181189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>XYZRootViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D182189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D181189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D183189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>XYZDataViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D184189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>XYZDataViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D185189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D184189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D186189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>XYZModelController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D187189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>XYZModelController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D188189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D187189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D189189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D18A189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D18A189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D18B189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D189189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D18C189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D18D189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D18C189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D18E189C93B4008CF61F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2456D1A0189C93B4008CF61F</string>
+				<string>24FFCEBD189CDB25004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2456D18F189C93B4008CF61F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2456D194189C93B4008CF61F</string>
+				<string>2456D196189C93B4008CF61F</string>
+				<string>2456D195189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2456D190189C93B4008CF61F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>24FFCEBF189CDB25004D706B</string>
+				<string>2456D19E189C93B4008CF61F</string>
+				<string>24FFCEB8189CD455004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2456D191189C93B4008CF61F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2456D1A6189C93B4008CF61F</string>
+			<key>buildPhases</key>
+			<array>
+				<string>2456D18E189C93B4008CF61F</string>
+				<string>2456D18F189C93B4008CF61F</string>
+				<string>2456D190189C93B4008CF61F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>2456D198189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>CrowdSoundTests</string>
+			<key>productName</key>
+			<string>CrowdSoundTests</string>
+			<key>productReference</key>
+			<string>2456D192189C93B4008CF61F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>2456D192189C93B4008CF61F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>CrowdSoundTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2456D193189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>2456D194189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D193189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D195189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D16E189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D196189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D172189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D197189C93B4008CF61F</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>2456D163189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>2456D16A189C93B4008CF61F</string>
+			<key>remoteInfo</key>
+			<string>CrowdSound</string>
+		</dict>
+		<key>2456D198189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>2456D16A189C93B4008CF61F</string>
+			<key>targetProxy</key>
+			<string>2456D197189C93B4008CF61F</string>
+		</dict>
+		<key>2456D199189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D19F189C93B4008CF61F</string>
+				<string>2456D19A189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CrowdSoundTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D19A189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D19B189C93B4008CF61F</string>
+				<string>2456D19C189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D19B189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>CrowdSoundTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D19C189C93B4008CF61F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2456D19D189C93B4008CF61F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D19D189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D19E189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D19C189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D19F189C93B4008CF61F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CrowdSoundTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2456D1A0189C93B4008CF61F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2456D19F189C93B4008CF61F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2456D1A1189C93B4008CF61F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2456D1A2189C93B4008CF61F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2456D1A3189C93B4008CF61F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2456D1A4189C93B4008CF61F</string>
+				<string>2456D1A5189C93B4008CF61F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2456D1A4189C93B4008CF61F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>9CBE68FEC7D4462A82219770</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>CrowdSound/CrowdSound-Prefix.pch</string>
+				<key>HEADER_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
+					<string>$PROJECT_DIR/**</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>CrowdSound/CrowdSound-Info.plist</string>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string>-all_load</string>
+					<string>-ObjC</string>
+				</array>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2456D1A5189C93B4008CF61F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>9CBE68FEC7D4462A82219770</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>CrowdSound/CrowdSound-Prefix.pch</string>
+				<key>HEADER_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
+					<string>$PROJECT_DIR/**</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>CrowdSound/CrowdSound-Info.plist</string>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string>-all_load</string>
+					<string>-ObjC</string>
+				</array>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>2456D1A6189C93B4008CF61F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2456D1A7189C93B4008CF61F</string>
+				<string>2456D1A8189C93B4008CF61F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2456D1A7189C93B4008CF61F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/CrowdSound.app/CrowdSound</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>CrowdSound/CrowdSound-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>CrowdSoundTests/CrowdSoundTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2456D1A8189C93B4008CF61F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/CrowdSound.app/CrowdSound</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>CrowdSound/CrowdSound-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>CrowdSoundTests/CrowdSoundTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>24FFCE7D189CD2CF004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.pb-project</string>
+			<key>name</key>
+			<string>SoundCloudAPI.xcodeproj</string>
+			<key>path</key>
+			<string>../CocoaSoundCloudAPI/SoundCloudAPI.xcodeproj</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE7E189CD2CF004D706B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>24FFCE83189CD2CF004D706B</string>
+				<string>24FFCE85189CD2CF004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE82189CD2CF004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE7D189CD2CF004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>94535F86123FAFDF00BD668A</string>
+			<key>remoteInfo</key>
+			<string>SoundCloudAPI.framework</string>
+		</dict>
+		<key>24FFCE83189CD2CF004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>wrapper.framework</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>SoundCloudAPI.framework</string>
+			<key>remoteRef</key>
+			<string>24FFCE82189CD2CF004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCE84189CD2CF004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE7D189CD2CF004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>D2AAC07E0554694100DB518D</string>
+			<key>remoteInfo</key>
+			<string>SoundCloudAPI</string>
+		</dict>
+		<key>24FFCE85189CD2CF004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>archive.ar</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>libSoundCloudAPI.a</string>
+			<key>remoteRef</key>
+			<string>24FFCE84189CD2CF004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCE86189CD306004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.pb-project</string>
+			<key>name</key>
+			<string>SoundCloudUI.xcodeproj</string>
+			<key>path</key>
+			<string>../CocoaSoundCloudUI/SoundCloudUI.xcodeproj</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE87189CD306004D706B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>24FFCE8C189CD306004D706B</string>
+				<string>24FFCE8E189CD306004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE8B189CD306004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE86189CD306004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>F6EF8C6113F929D700B20B40</string>
+			<key>remoteInfo</key>
+			<string>libSoundCloudUI</string>
+		</dict>
+		<key>24FFCE8C189CD306004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>archive.ar</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>libSoundCloudUI.a</string>
+			<key>remoteRef</key>
+			<string>24FFCE8B189CD306004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCE8D189CD306004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE86189CD306004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>F62E0CE5148FB27100BE8F14</string>
+			<key>remoteInfo</key>
+			<string>SoundCloudUI.framework</string>
+		</dict>
+		<key>24FFCE8E189CD306004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>wrapper.framework</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>SoundCloudUI.framework</string>
+			<key>remoteRef</key>
+			<string>24FFCE8D189CD306004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCE8F189CD311004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.pb-project</string>
+			<key>name</key>
+			<string>JSONKit.xcodeproj</string>
+			<key>path</key>
+			<string>../JSONKit/JSONKit.xcodeproj</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE90189CD311004D706B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>24FFCE95189CD311004D706B</string>
+				<string>24FFCE97189CD311004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE94189CD311004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE8F189CD311004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>F6803523148F6D22008A51BA</string>
+			<key>remoteInfo</key>
+			<string>libJSONKit</string>
+		</dict>
+		<key>24FFCE95189CD311004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>archive.ar</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>libJSONKit.a</string>
+			<key>remoteRef</key>
+			<string>24FFCE94189CD311004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCE96189CD311004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE8F189CD311004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>F6AE0202148F825C0004909F</string>
+			<key>remoteInfo</key>
+			<string>JSONKit.framework</string>
+		</dict>
+		<key>24FFCE97189CD311004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>wrapper.framework</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>JSONKit.framework</string>
+			<key>remoteRef</key>
+			<string>24FFCE96189CD311004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCE98189CD321004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.pb-project</string>
+			<key>name</key>
+			<string>OAuth2Client.xcodeproj</string>
+			<key>path</key>
+			<string>../OAuth2Client/OAuth2Client.xcodeproj</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE99189CD321004D706B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>24FFCE9E189CD321004D706B</string>
+				<string>24FFCEA0189CD321004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCE9D189CD321004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE98189CD321004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>942FFCD612315E0A00E6C65E</string>
+			<key>remoteInfo</key>
+			<string>OAuth2Client.framework</string>
+		</dict>
+		<key>24FFCE9E189CD321004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>wrapper.framework</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>OAuth2Client.framework</string>
+			<key>remoteRef</key>
+			<string>24FFCE9D189CD321004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCE9F189CD321004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE98189CD321004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>D2AAC07E0554694100DB518D</string>
+			<key>remoteInfo</key>
+			<string>OAuth2Client</string>
+		</dict>
+		<key>24FFCEA0189CD321004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>archive.ar</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>libOAuth2Client.a</string>
+			<key>remoteRef</key>
+			<string>24FFCE9F189CD321004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCEA1189CD32D004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.pb-project</string>
+			<key>name</key>
+			<string>OHAttributedLabel.xcodeproj</string>
+			<key>path</key>
+			<string>../OHAttributedLabel/OHAttributedLabel.xcodeproj</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCEA2189CD32D004D706B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>24FFCEA6189CD32D004D706B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCEA5189CD32D004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCEA1189CD32D004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>2</string>
+			<key>remoteGlobalIDString</key>
+			<string>F62728FA148F70DF00314599</string>
+			<key>remoteInfo</key>
+			<string>OHAttributedLabel</string>
+		</dict>
+		<key>24FFCEA6189CD32D004D706B</key>
+		<dict>
+			<key>fileType</key>
+			<string>archive.ar</string>
+			<key>isa</key>
+			<string>PBXReferenceProxy</string>
+			<key>path</key>
+			<string>libOHAttributedLabel.a</string>
+			<key>remoteRef</key>
+			<string>24FFCEA5189CD32D004D706B</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>24FFCEA7189CD37F004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE86189CD306004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F6EF8C6013F929D700B20B40</string>
+			<key>remoteInfo</key>
+			<string>libSoundCloudUI</string>
+		</dict>
+		<key>24FFCEA8189CD37F004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>libSoundCloudUI</string>
+			<key>targetProxy</key>
+			<string>24FFCEA7189CD37F004D706B</string>
+		</dict>
+		<key>24FFCEA9189CD3AB004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCEA1189CD32D004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F62728F9148F70DF00314599</string>
+			<key>remoteInfo</key>
+			<string>OHAttributedLabel</string>
+		</dict>
+		<key>24FFCEAA189CD3AB004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>OHAttributedLabel</string>
+			<key>targetProxy</key>
+			<string>24FFCEA9189CD3AB004D706B</string>
+		</dict>
+		<key>24FFCEAB189CD3AB004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE98189CD321004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>D2AAC07D0554694100DB518D</string>
+			<key>remoteInfo</key>
+			<string>OAuth2Client</string>
+		</dict>
+		<key>24FFCEAC189CD3AB004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>OAuth2Client</string>
+			<key>targetProxy</key>
+			<string>24FFCEAB189CD3AB004D706B</string>
+		</dict>
+		<key>24FFCEAD189CD3AB004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE8F189CD311004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F6803522148F6D22008A51BA</string>
+			<key>remoteInfo</key>
+			<string>libJSONKit</string>
+		</dict>
+		<key>24FFCEAE189CD3AB004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>libJSONKit</string>
+			<key>targetProxy</key>
+			<string>24FFCEAD189CD3AB004D706B</string>
+		</dict>
+		<key>24FFCEAF189CD3AB004D706B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>24FFCE7D189CD2CF004D706B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>D2AAC07D0554694100DB518D</string>
+			<key>remoteInfo</key>
+			<string>SoundCloudAPI</string>
+		</dict>
+		<key>24FFCEB0189CD3AB004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SoundCloudAPI</string>
+			<key>targetProxy</key>
+			<string>24FFCEAF189CD3AB004D706B</string>
+		</dict>
+		<key>24FFCEB1189CD3DA004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCE95189CD311004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEB2189CD3DA004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEA0189CD321004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEB3189CD3DA004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEA6189CD32D004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEB4189CD3DA004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCE85189CD2CF004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEB5189CD3DA004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCE8C189CD306004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEB6189CD455004D706B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>path</key>
+			<string>SoundCloud.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCEB7189CD455004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEB6189CD455004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEB8189CD455004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEB6189CD455004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEB9189CDB25004D706B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SCTTrackListViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCEBA189CDB25004D706B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SCTTrackListViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCEBB189CDB25004D706B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SCTTrackListViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24FFCEBC189CDB25004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEBA189CDB25004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEBD189CDB25004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEBA189CDB25004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEBE189CDB25004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEBB189CDB25004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>24FFCEBF189CDB25004D706B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24FFCEBB189CDB25004D706B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A17D568189CC0B900263305</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AddressBook.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AddressBook.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2A17D569189CC0B900263305</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A17D568189CC0B900263305</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A17D56A189CC0BE00263305</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AddressBookUI.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AddressBookUI.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2A17D56B189CC0BE00263305</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A17D56A189CC0BE00263305</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A17D56C189CC0D000263305</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreLocation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreLocation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2A17D56D189CC0D000263305</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A17D56C189CC0D000263305</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A17D56E189CC0DB00263305</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreText.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreText.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2A17D56F189CC0DB00263305</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A17D56E189CC0DB00263305</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A17D570189CC0E700263305</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2A17D571189CC0E700263305</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A17D570189CC0E700263305</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A17D572189CC0ED00263305</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>2A17D573189CC0ED00263305</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A17D572189CC0ED00263305</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>377F27FF26794E37B08C7AE6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>88625C685F1A47FFB0702927</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9CBE68FEC7D4462A82219770</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D70418D2F07B4F31B248672E</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>2456D163189C93B4008CF61F</string>
+</dict>
+</plist>

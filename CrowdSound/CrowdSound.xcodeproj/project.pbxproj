@@ -30,6 +30,10 @@
 		24FFCEB5189CD3DA004D706B /* libSoundCloudUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24FFCE8C189CD306004D706B /* libSoundCloudUI.a */; };
 		24FFCEB7189CD455004D706B /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEB6189CD455004D706B /* SoundCloud.bundle */; };
 		24FFCEB8189CD455004D706B /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEB6189CD455004D706B /* SoundCloud.bundle */; };
+		24FFCEBC189CDB25004D706B /* SCTTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */; };
+		24FFCEBD189CDB25004D706B /* SCTTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */; };
+		24FFCEBE189CDB25004D706B /* SCTTrackListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */; };
+		24FFCEBF189CDB25004D706B /* SCTTrackListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */; };
 		2A17D569189CC0B900263305 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D568189CC0B900263305 /* AddressBook.framework */; };
 		2A17D56B189CC0BE00263305 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D56A189CC0BE00263305 /* AddressBookUI.framework */; };
 		2A17D56D189CC0D000263305 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A17D56C189CC0D000263305 /* CoreLocation.framework */; };
@@ -176,6 +180,9 @@
 		24FFCE98189CD321004D706B /* OAuth2Client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2Client.xcodeproj; path = ../OAuth2Client/OAuth2Client.xcodeproj; sourceTree = "<group>"; };
 		24FFCEA1189CD32D004D706B /* OHAttributedLabel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OHAttributedLabel.xcodeproj; path = ../OHAttributedLabel/OHAttributedLabel.xcodeproj; sourceTree = "<group>"; };
 		24FFCEB6189CD455004D706B /* SoundCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SoundCloud.bundle; sourceTree = "<group>"; };
+		24FFCEB9189CDB25004D706B /* SCTTrackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTTrackListViewController.h; sourceTree = "<group>"; };
+		24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTTrackListViewController.m; sourceTree = "<group>"; };
+		24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCTTrackListViewController.xib; sourceTree = "<group>"; };
 		2A17D568189CC0B900263305 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		2A17D56A189CC0BE00263305 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		2A17D56C189CC0D000263305 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -275,6 +282,9 @@
 				2456D189189C93B4008CF61F /* Main.storyboard */,
 				2456D18C189C93B4008CF61F /* Images.xcassets */,
 				2456D175189C93B4008CF61F /* Supporting Files */,
+				24FFCEB9189CDB25004D706B /* SCTTrackListViewController.h */,
+				24FFCEBA189CDB25004D706B /* SCTTrackListViewController.m */,
+				24FFCEBB189CDB25004D706B /* SCTTrackListViewController.xib */,
 			);
 			path = CrowdSound;
 			sourceTree = "<group>";
@@ -526,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2456D18D189C93B4008CF61F /* Images.xcassets in Resources */,
+				24FFCEBE189CDB25004D706B /* SCTTrackListViewController.xib in Resources */,
 				24FFCEB7189CD455004D706B /* SoundCloud.bundle in Resources */,
 				2456D179189C93B4008CF61F /* InfoPlist.strings in Resources */,
 				2456D18B189C93B4008CF61F /* Main.storyboard in Resources */,
@@ -536,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24FFCEBF189CDB25004D706B /* SCTTrackListViewController.xib in Resources */,
 				2456D19E189C93B4008CF61F /* InfoPlist.strings in Resources */,
 				24FFCEB8189CD455004D706B /* SoundCloud.bundle in Resources */,
 			);
@@ -551,6 +563,7 @@
 				2456D17F189C93B4008CF61F /* XYZAppDelegate.m in Sources */,
 				2456D182189C93B4008CF61F /* XYZRootViewController.m in Sources */,
 				2456D185189C93B4008CF61F /* XYZDataViewController.m in Sources */,
+				24FFCEBC189CDB25004D706B /* SCTTrackListViewController.m in Sources */,
 				2456D188189C93B4008CF61F /* XYZModelController.m in Sources */,
 				2456D17B189C93B4008CF61F /* main.m in Sources */,
 			);
@@ -561,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2456D1A0189C93B4008CF61F /* CrowdSoundTests.m in Sources */,
+				24FFCEBD189CDB25004D706B /* SCTTrackListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
